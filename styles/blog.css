@@ -1,0 +1,132 @@
+@import "navbar.css";
+@import "footer.css";
+@import "header.css";
+
+body{
+    font-family: sans-serif;
+}
+
+#grid-container{
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    grid-template-areas:
+    'hd hd hd hd hd hd hd hd hd hd hd hd'
+    'nav nav nav nav nav nav nav nav nav nav nav nav' 
+    'ar ar ar ar ar ar ar ar ar ab ab ab'
+    'sc sc sc sc sc sc sc sc sc sc sc sc'
+    'ft ft ft ft ft ft ft ft ft ft ft ft';
+    height: 100vh;
+    grid-template-rows:100px 80px auto 100px;
+    }
+
+article{
+    margin-top: 20px;
+    grid-area: ar;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+}
+article>p{
+    margin-right: 15px;
+}
+article>h2{
+font-weight: bold;
+}
+
+
+#about{
+background-color: whitesmoke;
+border-radius: 10px;
+    margin-top: 20px;
+grid-area: ab;
+padding-left: 10px;
+display: flex;
+justify-content: center;
+flex-direction: column;
+padding-bottom: 10px;
+}
+
+#about>img{
+grid-area: ab;
+width: 85%;
+height: 50%;
+align-self: center;
+border-radius: 50%;
+}
+
+figcaption{
+    margin-top: 3px;
+text-align: center;
+}
+
+#about>h2{
+    color: blue;
+}
+
+#social-media{
+    grid-area: sc;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+
+
+.fa {
+    
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  /* Add a hover effect if you want */
+  .fa:hover {
+    opacity: 0.7;
+  }
+  
+  /* Set a specific color for each brand */
+  
+  /* Facebook */
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  
+  /* Twitter */
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+
+  .fa-linkedin {
+    background: #007bb5;
+    color: white;
+  }
+
+
+  @media only screen and (max-width: 900px) {
+    #grid-container{
+        
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas:
+        'hd'
+        'nav' 
+        'ar'
+        'ab'
+        'sc'
+        'ft'
+        ;
+        grid-template-rows:100px 80px auto 350px;
+        }
+
+    #about{
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+    }
+    #about>img{
+        max-width: 250px;
+    }
+  }
